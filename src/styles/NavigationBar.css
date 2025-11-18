@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 120px;
+  box-shadow: 1px 1px 20px rgb(32, 32, 32);
+  padding: 0 30px;
+  border-radius: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.brand-name {
+  color: rgb(95, 94, 91);
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0;
+}
+
+.profile-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.burger {
+  color: rgb(71, 71, 71);
+  font-size: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.burger:hover {
+  transform: scale(1.1);
+  color: #3b82f6;
+}
+.profile-pic{
+    width: 30px;
+    border: 1px solid rgb(148, 148, 147);
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.profile-pic:hover{
+    transform: scale(1.1);
+    border: 1px solid #3b82f6;
+}

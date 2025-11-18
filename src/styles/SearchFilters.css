@@ -1,0 +1,118 @@
+.search-results-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+    overflow-x: hidden;
+}
+
+.search-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+    gap: 10px;
+}
+
+.search-info p{
+    color: rgb(148, 146, 146);
+    font-size: larger;
+}
+.search-info h2{
+    font-size: 30px;
+}
+.tabs-container{
+    border-bottom: 1px solid rgb(180, 177, 177);
+    width: 100%;
+}
+.tab-btn{
+    background-color: white;
+    border: none;
+    color: gray;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 25px;
+}
+
+.tab-btn.active{
+    color: rgb(84, 84, 240);
+    border-bottom: 2px solid blue;
+}
+
+.results-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px;
+}
+
+.search-results{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 500px;
+    width: 1500px;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-bottom: 1px solid rgb(211, 210, 210);
+    padding: 20px;
+}
+.not-found-msg{
+    font-size: 30px;
+}
+.location-badge{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: 10px;
+    color: white;
+    padding: 0 10px;
+}
+.location-badge p {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2px;
+    font-weight: 600;
+}
+.like-badge{
+    background: linear-gradient(135deg, #ff6b6b, #fbbf24);
+    height: 30px;
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+.like-badge:hover{
+    transform: scale(1.3);
+}
+
+* {
+  scrollbar-width: thin;                 /* Firefox */
+  scrollbar-color: #9aa5b1 #f1f5f9;      /* Firefox: thumb track */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;                          /* za horizontalni */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;                   /* svijetla siva */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9aa5b1;                   /* tamnija siva */
+  border-radius: 8px;
+  border: 2px solid #f1f5f9;             /* “gap” oko palca */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;                   /* hover tamniji */
+}
