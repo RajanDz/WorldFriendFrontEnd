@@ -1,11 +1,10 @@
-import { button, div, p } from "framer-motion/client";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { NavigationBar } from "../components/layout/Navbar";
 import "../styles/SearchFilters.css";
 import { useState } from "react";
 import { locations } from "../data/citiesData";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-
+import { LocationCard } from "../components/common/cards/LocationCards";
 export function SearchResults(){
     const [searchParams] = useSearchParams();
     const query = searchParams.get("query");
@@ -31,50 +30,21 @@ export function SearchResults(){
     { id: "cities", label: `Gradovi (${filteredCity.length})` },
     { id: "locations", label: `Lokacije (${filteredLocations.length})` },
   ];
-function LocationCard({ loc }) {
-  return (
-    <div className="location" key={loc.id} onClick={() => navigate(`/location/${loc.id}`)}>
-      <div className="img-wrapper">
-        <img src={loc.image} alt={loc.name} />
-      </div>
 
-      <div className="location-badge">
-        <p>{loc.type}</p>
-        <FaHeart className="like-badge" />
-      </div>
-
-      <div className="overlay">
-        <p className="city">{loc.name}</p>
-        <p className="country">📍 {loc.city}</p>
-      </div>
-
-      <div className="about-city">
-        <p>{adjustDescription(loc.description)}</p>
-        <div className="rating">
-          <p>⭐ {loc.rating}</p>
-          <p>(1,244 recenzija)</p>
-        </div>
-      </div>
-    </div>
-  );
-}
 function ShowList({ list, query }) {
   return (
     <>
    {list.length < 1 ? (
-      <p className="not-found-msg">We can not find the city that start with "{query}"</p>
+      <p className="not-found-msg">We can not find any result that starts with  "{query}"</p>
         ): (
         <>
         {list.map((loc) => <LocationCard key={loc.id} loc={loc}/>)}
-          </>
+        </>
         )}
     </>
   )
 }
-const adjustDescription = (desc) => {
-        const max = 100;
-        return desc.length > max ? `${desc.substring(0,max)}...`: desc;
-    }
+
     return(
         <div className="search-results-page">
             <NavigationBar/>

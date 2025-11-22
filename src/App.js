@@ -5,6 +5,7 @@ import { ExplorePage } from './pages/Explore';
 import { SearchResults } from './pages/SearchFilters';
 import { AboutLocation } from './pages/PageDetails';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from './components/layout/FooterComponent';
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
       <Route path='/search' element={<SearchResults/>}></Route>
       <Route path='/location/:id' element={<AboutLocation/>}></Route>
     </Routes>
+    <Footer/>
     </BrowserRouter>
   );
 }

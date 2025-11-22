@@ -1,13 +1,10 @@
-import { div, h2, p } from "framer-motion/client"
 import { NavigationBar } from "../components/layout/Navbar"
 import { useState } from "react"
-import { FaHeart, FaRegHeart } from "react-icons/fa";
-import paris from "../assets/images/paris.jpg";
-import restourantDemo from "../assets/images/milanRestourant.jpeg";
 import "../styles/ExplorePage.css";
 import { useNavigate } from "react-router-dom";
 import { locations } from "../data/citiesData";
 import bannerImg from "../assets/images/welcome-img.png";
+import { LocationCard } from "../components/common/cards/LocationCards";
 export function ExplorePage(){
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState("");
@@ -58,29 +55,7 @@ export function ExplorePage(){
                 <h2>Trending city</h2>
                 <div className="locations">
                     {trendingCity.map((loc) => (
-                        <div className="location" key={loc.id} onClick={() => navigate(`/location/${loc.id}`)}>
-                            <div className="img-wrapper">
-                                <img src={loc.image} alt=""  />
-                            </div>
-
-                            <div className="loc-badge">
-                                <p className="trending-badge">🔥 Trending</p>
-                                <FaHeart className="liked-badge"/>
-                            </div>
-
-                            <div className="overlay">
-                                <p className="city" >{loc.name}</p>
-                                <p className="country">📍 {loc.country}</p>
-                            </div>
-
-                            <div className="about-city">
-                                <p>{adjustDescription(loc.description)}</p>
-                                <div className="rating">
-                                    <p>⭐ {loc.rating}</p>
-                                    <p>(1,244 recenzija)</p>
-                                </div>
-                            </div>
-                        </div>
+                        <LocationCard loc={loc} key={loc.id}/>
                     ))}
                 </div>
             </div>
@@ -89,29 +64,7 @@ export function ExplorePage(){
                 <h2>Featured locations</h2>
                 <div className="locations">
                     {featuredLocations.map((loc) => (
-                        <div className="location" key={loc.id} onClick={() => navigate(`/location/${loc.id}`)} >
-                            <div className="img-wrapper">
-                                <img src={loc.image} alt="" />
-                            </div>
-
-                            <div className="loc-badge">
-                                <p className="trending-badge">Restourant</p>
-                                <FaHeart className="liked-badge"/>
-                            </div>
-
-                            <div className="overlay">
-                                <p className="city">{loc.name}</p>
-                                <p className="country">📍 {loc.city}</p>
-                            </div>
-
-                            <div className="about-city">
-                                <p>{adjustDescription(loc.description)}</p>
-                                <div className="rating">
-                                    <p>⭐ {loc.rating}</p>
-                                    <p>(1,244 recenzija)</p>
-                                </div>
-                            </div>
-                        </div>
+                        <LocationCard loc={loc} key={loc.id}/>
                     ))}
                 </div>
             </div>
