@@ -95,3 +95,21 @@
 .comment-info p:hover{
     background-color: rgb(236, 234, 234);
 }
+
+@media (max-width: 600px) {
+    /* phone styles */
+    .reviews{
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 48px;
+    }
+    .review {
+        width: 300px;
+    }
+    .comment-info p {
+        width: 100px;
+    }
+    
+}

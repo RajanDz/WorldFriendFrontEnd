@@ -81,6 +81,7 @@
    overflow-x: auto;
    padding: 20px;
 }
+
 .location {
     position: relative;
     height: 400px;
@@ -90,6 +91,7 @@
     border-radius: 20px;
     transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .location:hover{
     transform: translateY(-6px);
     box-shadow: 0px 8px 25px rgb(119, 119, 121);
@@ -184,3 +186,16 @@
 }
 
 
+@media (max-width: 600px) {
+  /* phone styles */
+
+  
+.location{
+    width: 300px;
+}
+  .locations{
+    height: 500px;
+    flex-direction: column;
+    padding: 48px;
+  }
+}
