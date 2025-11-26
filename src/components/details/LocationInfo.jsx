@@ -13,10 +13,10 @@ export function LocationInfo({loc}){
                 </div>
                     <div className="loc-info">
                         <p>🏆Avarage rating</p>
-                        <p>{loc.rating}</p>
+                        <p>{loc.rating}⭐</p>
                     </div>
                         <div className="loc-info">
-                            <p>Reviews</p>
+                            <p>👋Reviews</p>
                             <p>1,244</p>
                         </div>
                             <div className="loc-info">

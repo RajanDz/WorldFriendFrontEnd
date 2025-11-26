@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+.navbar-container{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -52,6 +58,22 @@
 .burger:hover {
   transform: scale(1.1);
   color: #3b82f6;
+}
+.auth-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(10, 102, 240);
+  height: 40px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  border:  1px solid blue;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-radius 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.auth-btn:hover{
+    border-radius: 15px;
 }
 .profile-pic{
     width: 30px;

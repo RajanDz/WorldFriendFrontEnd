@@ -10,7 +10,6 @@ export function SearchResults(){
     const query = searchParams.get("query");
     const filter = searchParams.get("filter"); 
     const [activeTab,setActiveTab] = useState("all");
-    const navigate = useNavigate();
 
   let filteredSearch = locations.filter((loc) => 
     query ? loc.city.toLowerCase().includes(query.toLowerCase()) : true
@@ -47,7 +46,6 @@ function ShowList({ list, query }) {
 
     return(
         <div className="search-results-page">
-            <NavigationBar/>
             <div className="search-content">
 
               <div className="search-info">

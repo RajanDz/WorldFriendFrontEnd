@@ -15,14 +15,12 @@ export function AboutLocation(){
     if (!location) {
         return (
             <div className="location-page">
-                <NavigationBar />
                 <h2 style={{ padding: "40px" }}>Location not found</h2>
             </div>
         );
     }
     return (
         <div className="location-page">
-            <NavigationBar/>
                 <LocationHeader location={location}/>
                 <div className="about-location">
                     <div className="left-side-info">

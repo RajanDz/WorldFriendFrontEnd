@@ -1189,3 +1189,55 @@ export const locations = [
     location: true,
   },
 ]
+
+
+
+
+
+
+export const reviews = [
+  {
+    id: "r1",
+    author: "Marko Petrović",
+    locationId: "l2",
+    location: "Louvre Museum, Paris",
+    rating: 5,
+    date: "Prije 2 dana",
+    comment: "Nevjerovatno iskustvo! Muzej je ogroman i pun nevjerovatnih umjetničkih djela. Preporučujem da dođete rano ujutro kako biste izbjegli gužvu.",
+    helpful: 24,
+    images: 3,
+  },
+  {
+    id: "r2",
+    author: "Ana Jovanović",
+    locationId: "l3",
+    location: "Café de Flore, Paris",
+    rating: 4,
+    date: "Prije 5 dana",
+    comment: "Predivan kafić sa sjajnom atmosferom. Kafa je odlična, ali cijene su malo visoke. Ipak, vrijedi posjetiti radi autentičnog pariskog iskustva.",
+    helpful: 18,
+    images: 2,
+  },
+  {
+    id: "r3",
+    author: "Stefan Nikolić",
+    locationId: "l1",
+    location: "Le Cinq Restaurant, Paris",
+    rating: 5,
+    date: "Prije 1 sedmicu",
+    comment: "Najbolji restoran u kojem sam ikada jeo! Hrana je bila spektakularna, usluga besprijekorna. Malo skuplje, ali definitivno vrijedi svake pare.",
+    helpful: 42,
+    images: 5,
+  },
+  {
+    id: "r4",
+    author: "Rajan Dzaferadzovic",
+    locationId: "l4",
+    location: "Le Cinq Restaurant, Paris",
+    rating: 5,
+    date: "Prije 1 sedmicu",
+    comment: "Najbolji restoran u kojem sam ikada jeo! Hrana je bila spektakularna, usluga besprijekorna. Malo skuplje, ali definitivno vrijedi svake pare.",
+    helpful: 42,
+    images: 5,
+  },
+];
