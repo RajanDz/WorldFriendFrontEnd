@@ -188,8 +188,14 @@
 
 @media (max-width: 600px) {
   /* phone styles */
-
-  
+    .welcome-img {
+        object-fit: fill;
+        height: 150px;
+        width: 100%;
+    }
+ .trending-locations{
+   margin-top: 100px;
+}
 .location{
     width: 300px;
 }
